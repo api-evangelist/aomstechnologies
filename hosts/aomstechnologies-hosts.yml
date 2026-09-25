@@ -3,22 +3,48 @@ method: derived
 source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
 generator: derive-hosts.py
 summary:
-  hosts: 1
-  own: 0
+  hosts: 3
+  own: 3
   other_domain: 0
-  platform: 1
+  platform: 0
   roles:
+  - api
+  - legal
   - website
 hosts:
-- host: equityzen.com
+- host: amstechnologies.com
   found_by:
   - pointer
-  - vendor-detect
+  - probed
+  - contract-discovery
+  - well-known
   types:
+  - Newsroom
   - Website
-  serves:
-  - cdn
-  vendor: akamai
-  registrable_domain: equityzen.com
+  - PrivacyPolicy
+  - Support
+  serves: []
+  registrable_domain: amstechnologies.com
   role: website
-  relation: platform
+  relation: own
+- host: api.amstechnologies.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: amstechnologies.com
+  role: api
+  relation: own
+- host: shop.amstechnologies.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - TermsOfService
+  serves: []
+  registrable_domain: amstechnologies.com
+  role: legal
+  relation: own

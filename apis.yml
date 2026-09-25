@@ -2,8 +2,7 @@ aid: aomstechnologies
 
 name: Aomstechnologies
 
-description: 'Aomstechnologies is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Aomstechnologies, operating as AMS Technologies, provides optical, thermal management, and electronics solutions for high-mix low-volume markets. They offer custom engineering, production services, and a range of technology products aimed at European industry resilience and innovation.'
 
 url: https://raw.githubusercontent.com/api-evangelist/aomstechnologies/refs/heads/main/apis.yml
 
@@ -22,6 +21,11 @@ modified: '2026-09-25'
 
 tags:
 - Company
+- Optical
+- Thermal Management
+- Electronics
+- Engineering
+- Custom Solutions
 
 maintainers:
 - FN: Kin Lane
@@ -30,19 +34,35 @@ maintainers:
   email: info@apis.io
 
 common:
+- type: TermsOfService
+  url: https://shop.amstechnologies.com/Information/Terms-and-Conditions/
+- type: Newsroom
+  url: https://amstechnologies.com/news/
 - type: Hosts
   url: hosts/aomstechnologies-hosts.yml
-- type: Vendors
-  url: vendors/aomstechnologies-vendors.yml
 - type: DomainSecurity
   url: security/aomstechnologies-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/aomstechnologies
+  url: https://amstechnologies.com
+- type: PrivacyPolicy
+  url: https://amstechnologies.com/cookie-policy-eu/
+- type: Support
+  url: https://amstechnologies.com/contact-us/
 
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI or other machine-readable contract found at api.amstechnologies.com and no documentation host provides specs.
+  evidence:
+    - url: https://api.amstechnologies.com/openapi.json
+      status: 000
+    - url: https://api.amstechnologies.com/openapi.yaml
+      status: 000
+  checked: 2026-09-25
 apis: []
 x-enrichment:
   date: '2026-09-25'
   status: enriched
-  artifacts_added: 3
+  artifacts_added: 2
   pass: modular-v1
   engine: identity=local,contract=local,surfaces=local,docs=local
